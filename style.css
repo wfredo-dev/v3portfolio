@@ -6,6 +6,7 @@
 }
 body,
 html {
+  border: 1px solid black;
   margin: 0;
   padding: 0;
 }
@@ -134,33 +135,53 @@ section {
   }
   .about-right {
     margin-top: 40px;
-    border: 1px solid black;
+
     display: flex;
     flex-direction: column;
     flex: 1;
     .languages {
       padding-top: 20px;
       flex: 1;
-      border: 1px solid black;
     }
     .frameworks {
       flex: 1;
-      border: 1px solid black;
     }
-    .container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 100px 200px;
-      gap: 20px;
+    .languages .container,
+    .frameworks .container {
+      display: flex;
     }
-    .item {
-      background-color: lightgray;
-      padding: 20px;
-      text-align: center;
-      .img {
-        width: 30px;
-        height: 30px;
-      }
+  }
+}
+#about .about-right .languages .container .item > img,
+#about .about-right .frameworks .container .item > img {
+  width: 50px;
+  border-radius: 50%;
+}
+@media (max-width: 1126px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    .hero-right {
+      order: -1;
     }
+    .hero .hero-left {
+      padding-left: 0px;
+    }
+  }
+}
+@media (max-width: 1432px) {
+  .hero .hero-left {
+    padding-left: 200px;
+    color: red;
+  }
+  #logo {
+    padding-top: 30px;
+    margin-left: 200px;
+  }
+}
+@media (max-width: 1235px) {
+  #about {
+    flex-direction: column;
   }
 }
