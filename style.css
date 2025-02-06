@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+#logo {
+  padding-top: 30px;
+  margin-left: 500px;
+}
+#logo img {
+  margin-top: 50px;
+  padding: 10px;
+  width: 150px;
+}
+header {
+  position: fixed;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  background-color: black;
+}
+#nav-list #nav-items a {
+  display: block;
+  padding: 20px;
+  writing-mode: vertical-lr;
+  font-size: 1rem;
+  text-decoration: none;
+  color: white;
+}
+#nav-list #nav-items a:hover {
+  background-color: rgba(231, 219, 202, 0.705);
+}
+#nav-list #nav-items {
+  list-style: none;
+}
+#nav-list {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+/* section */
+section {
+  width: 100vw;
+  padding-right: 150px;
+}
+#home {
+  height: 100vh;
+}
+.hero {
+  display: flex;
+
+  height: 100%;
+  .hero-left {
+    height: 100%;
+    flex: 1;
+    color: rgb(2, 2, 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 500px;
+    .hello {
+      color: rgb(0, 0, 0);
+      font-weight: 900;
+    }
+    h1 {
+      font-size: 3rem;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+  }
+  .hero-right {
+    flex: 1;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    img {
+      height: 500px;
+      width: 500px;
+      border-radius: 50%;
+    }
+  }
+}
+
+/* about */
+#about {
+  display: flex;
+  min-height: 100vh;
+  .about-content {
+    flex: 1;
+  }
+  .about-left {
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    flex: 1;
+
+    .about-left-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 700px;
+      width: 700px;
+      padding-right: 50px;
+
+      h1 {
+        letter-spacing: 2px;
+        font-size: 3rem;
+
+        font-weight: 700;
+      }
+
+      p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        font-family: "Roboto", sans-serif;
+      }
+    }
+  }
+  .about-right {
+    margin-top: 40px;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    .languages {
+      padding-top: 20px;
+      flex: 1;
+      border: 1px solid black;
+    }
+    .frameworks {
+      flex: 1;
+      border: 1px solid black;
+    }
+    .container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 100px 200px;
+      gap: 20px;
+    }
+    .item {
+      background-color: lightgray;
+      padding: 20px;
+      text-align: center;
+      .img {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
